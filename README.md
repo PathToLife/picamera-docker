@@ -2,17 +2,19 @@
 
 A dockerized python raspberry pi camera server with basic security in mind
 
-Tested on: 
-- Raspberry Pi 4, Raspberry Pi OS 32bit, Docker-CE
-- Linux pi2 5.4.83-v7l+ #1379 SMP Mon Dec 14 13:11:54 GMT 2020 armv7l GNU/Linux
-
-Expiry: roughly 2 months from last commit before it stops working, and needs some updating
-
+## Features
 - Multiple clients can visit the stream
 - The camera auto stops if no one is viewing (5 sec)
 - Http basic auth
 - Nginx Reverse Proxy to handle SSL
 - SSL Only
+
+### Tested on
+- Raspberry Pi 4, Raspberry Pi OS 32bit, Docker-CE
+- Linux pi2 5.4.83-v7l+ #1379 SMP Mon Dec 14 13:11:54 GMT 2020 armv7l GNU/Linux
+
+#### Project Valid Lifetime
+roughly 2 months from last commit before it stops working, and needs some updating
 
 ## Getting Started
 
