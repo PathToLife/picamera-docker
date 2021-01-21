@@ -38,12 +38,12 @@ Put the Certificate in
 
 Put the Certificate Key in
 
-`camera.home.key`
+`/nginx/certs/camera.home.key`
 
 #### Auth Password
-create a `.env` file in the same directory as docker-compose.yml (the root of this project) 
+create a `/.env` file in the same directory as `docker-compose.yml` (the root of this project) 
 
-Fill out `.env` witht he below
+Fill out `.env` with the below
 ```
 PICAMERA_USER=admin
 PICAMERA_PASSWORD=whatever you want # default is admin
