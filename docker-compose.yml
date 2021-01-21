@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+  picamera:
+    build: ./src
+    environment:
+      LD_LIBRARY_PATH: /opt/vc/lib
+      PICAMERA_USER: ${PICAMERA_USER}
+      PICAMERA_PASSWORD: ${PICAMERA_PASSWORD}
+    volumes:
+      - /opt/vc:/opt/vc
+    devices:
+      - /dev/vchiq:/dev/vchiq
+    privileged: true
+
+  nginx-proxy:
+    build: ./nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./certs:/etc/nginx/certs
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    depends_on:
+      - picamera

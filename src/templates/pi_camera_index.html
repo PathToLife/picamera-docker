@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <title>Video Stream</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/n.ico">
+    <meta charset="utf-8">
+</head>
+<body>
+<h1 class="nobackground">Robot Video Stream</h1>
+<img class="video" src="{{ url_for('video_feed') }}" alt="video feed">
+<form method="get" action="/image?">
+    <button class="btn" type="submit">Download!</button>
+</form>
+</body>
+</html>
